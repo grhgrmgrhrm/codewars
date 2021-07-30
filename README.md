@@ -2,7 +2,8 @@
 // https://www.codewars.com/kata/5277c8a221e209d3f6000b56
 
 
-/* Solution 1 */
+## Solution 1
+```
 function validBraces(braces){
   var matches = { '(':')', '{':'}', '[':']' };
   var stack = [];
@@ -22,9 +23,10 @@ function validBraces(braces){
 
   return stack.length === 0; // any unclosed braces left?
 }
+```
 
-
-/* Solution 2 */
+## Solution 2
+```
 function validBraces(braces){
   var queue = [];
 
@@ -47,8 +49,10 @@ function validBraces(braces){
   
   return queue.length === 0;
 }
+```
 
-/* Solution 3 */
+## Solution 3
+```
 function validBraces(braces){
   var matches = { '(':')', '{':'}', '[':']' };
   var queue = [];
@@ -65,12 +69,15 @@ function validBraces(braces){
 
   return queue.length === 0;
 }
+```
 
-/* Solution 4 */
+## Solution 4
+```
 function validBraces(braces){
   while(braces.indexOf("{}") != -1 || braces.indexOf("()") != -1 || braces.indexOf("[]") != -1){
     braces = braces.replace("{}", "").replace("()", "").replace("[]", "");
   }
+```
   
   return braces.length == 0;
 }
