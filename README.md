@@ -1,41 +1,51 @@
-## Opposite number
+## Perimeter sequence
 
-https://www.codewars.com/kata/opposite-number
+https://www.codewars.com/kata/perimeter-sequence
 
 ### en: 
-Very simple, given an integer or a floating-point number, find its opposite.
+The first three stages of a sequence are shown.
 
+![images](https://user-images.githubusercontent.com/30986517/151703534-45b7233b-6112-466e-8da4-23819465caba.png)
+
+The blocksize is a by a and a ≥ 1.
+
+What is the perimeter of the nth shape in the sequence (n ≥ 1) ?
 ### ru: 
-Очень просто, учитывая целое число или число с плавающей запятой, найдите его противоположность.
+
+Показаны первые три этапа последовательности.
+
+![images](https://user-images.githubusercontent.com/30986517/151703534-45b7233b-6112-466e-8da4-23819465caba.png)
+
+Размер блока равен a на a и a ≥ 1.
+
+Каков периметр n-й фигуры в последовательности (n ≥ 1)?
 
 ## Solution 1
 
 ```
-function opposite(number) {
-  return number * -1;
-}
+
+
 
 ```
 
 ## Solution 2
 
 ```
-function opposite(number) {
-  return(-number);
-}
+
+
 
 ```
 
 ## Solution 3
 
 ```
-const opposite = number => -number;
+
 
 ```
 
 ## Solution 4
 
 ```
-const opposite = n => -n;
+
 
 ```
