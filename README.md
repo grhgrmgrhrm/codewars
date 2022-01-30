@@ -24,7 +24,9 @@ What is the perimeter of the nth shape in the sequence (n ≥ 1) ?
 
 ```
 
-
+function perimeterSequence(a,n) {
+  return 4*a*n
+}
 
 ```
 
@@ -32,7 +34,7 @@ What is the perimeter of the nth shape in the sequence (n ≥ 1) ?
 
 ```
 
-
+perimeterSequence = (a, n)  => a * n * 4;
 
 ```
 
@@ -40,6 +42,7 @@ What is the perimeter of the nth shape in the sequence (n ≥ 1) ?
 
 ```
 
+perimeterSequence = (a, n)  => a * n * 4;
 
 ```
 
@@ -47,5 +50,12 @@ What is the perimeter of the nth shape in the sequence (n ≥ 1) ?
 
 ```
 
+function perimeterSequence(a,n) {
+  let sum = 0;
+  for(let i = 0 ; i < n; i++) {
+    sum += 4 * a;
+  }
+  return sum;
+}
 
 ```
