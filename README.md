@@ -1,32 +1,20 @@
-## Fake binary
+## Largest Square Inside A Circle
 
-https://www.codewars.com/kata/fake-binary/javascript
+https://www.codewars.com/kata/largest-square-inside-a-circle
 
 ### en: 
-Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
-
-Note: input will never be an empty string
+Determine the area of the largest square that can fit inside a circle with radius r.
 
 
 ### ru: 
-Учитывая строку цифр, вы должны заменить любую цифру ниже 5 на "0", а любую цифру 5 и выше - на "1". Верните результирующую строку.
-
-Примечание: ввод никогда не будет пустой строкой
+Определите площадь наибольшего квадрата, который может поместиться внутри круга радиусом r.
 
 
 ## Solution 1
 
 ```
-function fakeBin(x){
-  let newStr = "";
-  for(let i=0; i < x.length; i++){
-    if (+x[i] >= 5) {
-      newStr += "1";
-    } else {
-      newStr += "0";
-    }
-  }
-  return newStr;
+function areaLargestSquare(r) {
+  return r*r*2; 
 }
 
 ```
@@ -34,31 +22,20 @@ function fakeBin(x){
 ## Solution 2
 
 ```
-function fakeBin(x) {
-    return x.split('').map(n => n < 5 ? 0 : 1).join('');
-}
+var areaLargestSquare = r => r**2 + r**2
 
 ```
 
 ## Solution 3
 
 ```
-
-function fakeBin(x) {
-  return x.replace(/\d/g, d => d < 5 ? 0 : 1);
-}
+const areaLargestSquare = (radius) => Math.pow(radius, 2) * 2 
 
 ```
 
 ## Solution 4
 
 ```
-function fakeBin(x){
-  let result = '';
-  for(let i = 0; i < x.length; i++){
-    x[i] < 5 ? result += 0 : result += 1;
-  }
-  return result;
-}
+areaLargestSquare=(r)=>2*r**2
 
 ```
