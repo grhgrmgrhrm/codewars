@@ -1,18 +1,18 @@
-## Number of Decimal Digits
+## Opposite number
 
-https://www.codewars.com/kata/number-of-decimal-digits
+https://www.codewars.com/kata/opposite-number
 
 ### en: 
-Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
+Very simple, given an integer or a floating-point number, find its opposite.
 
 ### ru: 
-Определите общее количество цифр в целом числе (n>=0), заданном в качестве входных данных для функции. Например, 9 - это одна цифра, 66 состоит из 2 цифр, а 128685 состоит из 6 цифр. Будьте осторожны, чтобы избежать переполнения / переполнения.
+Очень просто, учитывая целое число или число с плавающей запятой, найдите его противоположность.
 
 ## Solution 1
 
 ```
-function digits(n) {
-  return n.toString().length;
+function opposite(number) {
+  return number * -1;
 }
 
 ```
@@ -20,8 +20,8 @@ function digits(n) {
 ## Solution 2
 
 ```
-function digits(n) {
-  return String(n).length
+function opposite(number) {
+  return(-number);
 }
 
 ```
@@ -29,13 +29,13 @@ function digits(n) {
 ## Solution 3
 
 ```
-function digits(n) {
-  return `${n}`.length;
-}
+const opposite = number => -number;
+
 ```
 
 ## Solution 4
 
 ```
-const digits = n => n.toString().length;
+const opposite = n => -n;
+
 ```
