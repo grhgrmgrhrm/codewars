@@ -1,47 +1,58 @@
-## Capitalization and Mutability
+## Century From Year
 
-https://www.codewars.com/kata/capitalization-and-mutability
+https://www.codewars.com/kata/century-from-year
 
 ### en: 
-Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+Introduction
 
-Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+Task
 
-Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+Given a year, return the century it is in.
 
 
 ### ru: 
-Предполагалось, что ваш коллега напишет простую вспомогательную функцию для заглавной строки (содержащей одно слово), прежде чем отправиться в отпуск.
+Вступление
 
-К сожалению, сейчас они ушли, и код, который они вам дали, не работает. Исправьте вспомогательную функцию, которую они написали, чтобы она работала так, как задумано (т.Е. сделайте первый символ в строке "слово" прописным).
+Первое столетие охватывает период с 1 года до 100 года включительно, второе столетие - с 101 года до 200 года включительно и т.д.
+Задача
 
-Не беспокойтесь о том, что в функцию передаются числа, специальные символы или нестроковые типы. Длина строки будет составлять от 1 символа до 10 символов, но никогда не будет пустой.
+Учитывая год, верните столетие, в котором оно находится.
+
+Examples
+
+```
+1705 --> 18
+1900 --> 19
+1601 --> 17
+2000 --> 20
+```
 
 
 ## Solution 1
 ```
-function capitalizeWord(word) {
-  return word[0].toUpperCase() + word.slice(1);
-}
+const century = year => Math.ceil(year/100)
 
 ```
 
 ## Solution 2
 ```
-const capitalizeWord = (word) => word.replace(word.charAt(0), word.charAt(0).toUpperCase());
+function century(year) {
+  return Math.ceil(year/100); //using ceiling method to round up to nearest century (100)
+}
 
 ```
 
 ## Solution 3
 ```
-const capitalizeWord = word => word[0].toUpperCase()+word.slice(1);
+function century(year) {
+  return (year + 99) / 100 | 0;
+}
 
 ```
 
 ## Solution 4
 ```
-function capitalizeWord(word) {
-  return word[0].toUpperCase() + word.slice(1).toLowerCase();
-}
+const century = year => year % 100 === 0 ? parseInt(year / 100) : parseInt(year / 100) + 1;
 
 ```
