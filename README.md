@@ -1,54 +1,47 @@
-## can we divide it
-https://www.codewars.com/kata/can-we-divide-it
+## Capitalization and Mutability
 
-en: Your task is to create the function isDivideBy (or is_divide_by) to check if an integer number is divisible by both integers a and b.
+https://www.codewars.com/kata/capitalization-and-mutability
 
-ru: Ваша задача состоит в том, чтобы создать функцию isDivideBy (или is_divide_by), чтобы проверить, делится ли целое число на оба целых числа a и b.
+### en: 
+Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
 
-A few cases:
+Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
 
-```
-(-12, 2, -6)  ->  true
-(-12, 2, -5)  ->  false
+Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
 
-(45, 1, 6)    ->  false
-(45, 5, 15)   ->  true
 
-(4, 1, 4)     ->  true
-(15, -5, 3)   ->  true
-```
+### ru: 
+Предполагалось, что ваш коллега напишет простую вспомогательную функцию для заглавной строки (содержащей одно слово), прежде чем отправиться в отпуск.
+
+К сожалению, сейчас они ушли, и код, который они вам дали, не работает. Исправьте вспомогательную функцию, которую они написали, чтобы она работала так, как задумано (т.Е. сделайте первый символ в строке "слово" прописным).
+
+Не беспокойтесь о том, что в функцию передаются числа, специальные символы или нестроковые типы. Длина строки будет составлять от 1 символа до 10 символов, но никогда не будет пустой.
+
 
 ## Solution 1
 ```
-function isDivideBy(number, a, b) {
-  if (  number % a ===0 && number % b === 0 ) {
-    return true
-  } else {
-    return false
-  }
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
 }
+
 ```
 
 ## Solution 2
 ```
-const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0;
+const capitalizeWord = (word) => word.replace(word.charAt(0), word.charAt(0).toUpperCase());
 
 ```
 
 ## Solution 3
 ```
-
-function isDivideBy(number, a, b) {
-  return [a, b].every(i => number % i === 0)
-}
+const capitalizeWord = word => word[0].toUpperCase()+word.slice(1);
 
 ```
 
 ## Solution 4
 ```
-
-function isDivideBy(number, a, b) {
-  return (number%a + number%b) === 0
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1).toLowerCase();
 }
 
 ```
