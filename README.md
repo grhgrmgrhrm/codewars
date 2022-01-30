@@ -1,6 +1,6 @@
-## Convert a String to a Number!
+## Convert to Binary
 
-https://www.codewars.com/kata/convert-a-string-to-a-number
+https://www.codewars.com/kata/convert-to-binary
 
 ### en: 
 We need a function that can transform a string into a number. What ways of achieving this do you know?
@@ -9,46 +9,44 @@ Note: Don't worry, all inputs will be strings, and every string is a perfectly v
 
 
 ### ru: 
-Нам нужна функция, которая может преобразовать строку в число. Какие способы достижения этой цели вы знаете?
-
-Примечание: Не волнуйтесь, все входные данные будут строками, и каждая строка является абсолютно корректным представлением целого числа.
+Учитывая неотрицательное целое число n, напишите функцию to_binary/To Binary, которая возвращает это число в двоичном формате.
 
 ### Examples
 
 ```
-"1234" --> 1234
-"605"  --> 605
-"1405" --> 1405
-"-7" --> -7
+toBinary(1)  /* should return 1 */
+toBinary(5)  /* should return 101 */
+toBinary(11) /* should return 1011 */
+
 ```
 
 
 ## Solution 1
+
 ```
-var stringToNumber = function(str){
-  return +str;
-}
+let toBinary = n => +n.toString(2)
 
 ```
 
 ## Solution 2
+
 ```
-var stringToNumber = function(str){
-  return parseInt(str);
-}
+toBinary = (n) => parseInt(n.toString(2));
 
 ```
 
 ## Solution 3
+
 ```
-var stringToNumber = function(str){
-  return Number(str);
+function toBinary(n){
+  return +n.toString(2);
 }
 
 ```
 
 ## Solution 4
+
 ```
-var stringToNumber = Number;
+const toBinary = n => Number(n.toString(2)) ;
 
 ```
