@@ -1,58 +1,52 @@
-## Century From Year
+## Convert a Number to a String!
 
-https://www.codewars.com/kata/century-from-year
+https://www.codewars.com/kata/convert-a-number-to-a-string
 
 ### en: 
-Introduction
+We need a function that can transform a number into a string.
 
-The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
-Task
-
-Given a year, return the century it is in.
+What ways of achieving this do you know?
 
 
 ### ru: 
-Вступление
+Нам нужна функция, которая может преобразовать число в строку.
 
-Первое столетие охватывает период с 1 года до 100 года включительно, второе столетие - с 101 года до 200 года включительно и т.д.
-Задача
-
-Учитывая год, верните столетие, в котором оно находится.
+Какие способы достижения этой цели вы знаете?
 
 Examples
 
 ```
-1705 --> 18
-1900 --> 19
-1601 --> 17
-2000 --> 20
+123 --> "123"
+999 --> "999"
 ```
 
 
 ## Solution 1
 ```
-const century = year => Math.ceil(year/100)
-
+function numberToString(num) {
+  return num.toString();
+}
 ```
 
 ## Solution 2
 ```
-function century(year) {
-  return Math.ceil(year/100); //using ceiling method to round up to nearest century (100)
+function numberToString(num) {
+  // Return a string of the number here!
+  return String(num);
 }
 
 ```
 
 ## Solution 3
 ```
-function century(year) {
-  return (year + 99) / 100 | 0;
+function numberToString(num) {
+  return ''+num;
 }
 
 ```
 
 ## Solution 4
 ```
-const century = year => year % 100 === 0 ? parseInt(year / 100) : parseInt(year / 100) + 1;
+const numberToString = num => num.toString();
 
 ```
