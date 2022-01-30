@@ -1,26 +1,32 @@
-## Even or Odd
+## Fake binary
 
-https://www.codewars.com/kata/even-or-odd
+https://www.codewars.com/kata/fake-binary/javascript
 
 ### en: 
-Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+Note: input will never be an empty string
 
 
 ### ru: 
-Создайте функцию, которая принимает целое число в качестве аргумента и возвращает "Четное" для четных чисел или "Нечетное" для нечетных чисел.
+Учитывая строку цифр, вы должны заменить любую цифру ниже 5 на "0", а любую цифру 5 и выше - на "1". Верните результирующую строку.
 
-
+Примечание: ввод никогда не будет пустой строкой
 
 
 ## Solution 1
 
 ```
-function even_or_odd(number) {
-  if (number%2 == 0) {
-    return "Even";
-  } else {
-    return "Odd";
+function fakeBin(x){
+  let newStr = "";
+  for(let i=0; i < x.length; i++){
+    if (+x[i] >= 5) {
+      newStr += "1";
+    } else {
+      newStr += "0";
+    }
   }
+  return newStr;
 }
 
 ```
@@ -28,8 +34,8 @@ function even_or_odd(number) {
 ## Solution 2
 
 ```
-function even_or_odd(number) {
-  return number % 2 ? "Odd" : "Even"
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
 }
 
 ```
@@ -37,13 +43,22 @@ function even_or_odd(number) {
 ## Solution 3
 
 ```
-function even_or_odd(number) {
-   return number % 2 === 0 ? 'Even' : 'Odd';
+
+function fakeBin(x) {
+  return x.replace(/\d/g, d => d < 5 ? 0 : 1);
 }
+
 ```
 
 ## Solution 4
 
 ```
-const even_or_odd = n => (n % 2) ? 'Odd' : 'Even';
+function fakeBin(x){
+  let result = '';
+  for(let i = 0; i < x.length; i++){
+    x[i] < 5 ? result += 0 : result += 1;
+  }
+  return result;
+}
+
 ```
