@@ -1,52 +1,54 @@
-## Convert a Number to a String!
+## Convert a String to a Number!
 
-https://www.codewars.com/kata/convert-a-number-to-a-string
+https://www.codewars.com/kata/convert-a-string-to-a-number
 
 ### en: 
-We need a function that can transform a number into a string.
+We need a function that can transform a string into a number. What ways of achieving this do you know?
 
-What ways of achieving this do you know?
+Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
 
 
 ### ru: 
-Нам нужна функция, которая может преобразовать число в строку.
+Нам нужна функция, которая может преобразовать строку в число. Какие способы достижения этой цели вы знаете?
 
-Какие способы достижения этой цели вы знаете?
+Примечание: Не волнуйтесь, все входные данные будут строками, и каждая строка является абсолютно корректным представлением целого числа.
 
-Examples
+### Examples
 
 ```
-123 --> "123"
-999 --> "999"
+"1234" --> 1234
+"605"  --> 605
+"1405" --> 1405
+"-7" --> -7
 ```
 
 
 ## Solution 1
 ```
-function numberToString(num) {
-  return num.toString();
+var stringToNumber = function(str){
+  return +str;
 }
+
 ```
 
 ## Solution 2
 ```
-function numberToString(num) {
-  // Return a string of the number here!
-  return String(num);
+var stringToNumber = function(str){
+  return parseInt(str);
 }
 
 ```
 
 ## Solution 3
 ```
-function numberToString(num) {
-  return ''+num;
+var stringToNumber = function(str){
+  return Number(str);
 }
 
 ```
 
 ## Solution 4
 ```
-const numberToString = num => num.toString();
+var stringToNumber = Number;
 
 ```
