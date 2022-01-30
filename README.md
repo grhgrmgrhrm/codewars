@@ -1,20 +1,18 @@
-## Largest Square Inside A Circle
+## Number of Decimal Digits
 
-https://www.codewars.com/kata/largest-square-inside-a-circle
+https://www.codewars.com/kata/number-of-decimal-digits
 
 ### en: 
-Determine the area of the largest square that can fit inside a circle with radius r.
-
+Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
 
 ### ru: 
-Определите площадь наибольшего квадрата, который может поместиться внутри круга радиусом r.
-
+Определите общее количество цифр в целом числе (n>=0), заданном в качестве входных данных для функции. Например, 9 - это одна цифра, 66 состоит из 2 цифр, а 128685 состоит из 6 цифр. Будьте осторожны, чтобы избежать переполнения / переполнения.
 
 ## Solution 1
 
 ```
-function areaLargestSquare(r) {
-  return r*r*2; 
+function digits(n) {
+  return n.toString().length;
 }
 
 ```
@@ -22,20 +20,22 @@ function areaLargestSquare(r) {
 ## Solution 2
 
 ```
-var areaLargestSquare = r => r**2 + r**2
+function digits(n) {
+  return String(n).length
+}
 
 ```
 
 ## Solution 3
 
 ```
-const areaLargestSquare = (radius) => Math.pow(radius, 2) * 2 
-
+function digits(n) {
+  return `${n}`.length;
+}
 ```
 
 ## Solution 4
 
 ```
-areaLargestSquare=(r)=>2*r**2
-
+const digits = n => n.toString().length;
 ```
